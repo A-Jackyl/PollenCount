@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    --grey: #d9d9d9;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+li {
+    list-style-type: none;
+    text-align: right;
+}
+
+/* REUSEABLE */
+
+.line_br {
+    width: 100%;
+    height: 1px;
+    background-color: var(--grey);
+    margin-block: .5rem;
+}
+
+#bg_img {
+    z-index: -1000;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    align-self: center;
+    width: 100%;
+}
+
+
+.pollenApp {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 300px;
+    margin-top: 2rem;
+    margin-inline: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#pollen_icon {
+    filter: invert(1);
+    width: 60%;
+    margin-block: 1rem ;
+    align-self: center;
+    animation-name: rock;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes rock {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
